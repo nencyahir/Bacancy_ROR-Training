@@ -60,7 +60,11 @@ module Bank
 				     else
 				       @condition = false
 				     end
-				end  
+				else
+				  puts "Please enter the correct pin"
+			          start
+				  break				 
+				end 
 			end
 		 end
 	end

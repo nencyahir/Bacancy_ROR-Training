@@ -42,7 +42,22 @@ class Calculator
 end
 
 calc = Calculator.new
-calc.sum
-calc.sub
-calc.mul
-calc.div
+
+puts "1.Sum"
+puts "2.Substraction"
+puts "3.Multiplication"
+puts "4.Division"
+puts "Enter Your Choice: "
+choice = gets.chomp
+case choice
+when "1"
+	calc.sum
+when "2"
+	calc.sub
+when "3"
+	calc.mul
+when "4"
+	calc.div
+else
+	puts "enter valid choice"
+end

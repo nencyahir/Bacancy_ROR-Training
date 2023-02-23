@@ -1,4 +1,6 @@
-class Havmore
+COMPANY_NAME = "Havmore"
+$productcompany = "Havmore & more"
+class Product
     @@inc=1
     
     def initialize(name,price)
@@ -6,7 +8,8 @@ class Havmore
         @pprice = price
     end
   
-    def get_ip
+    def getdetails
+    	puts "\n**********************Welcome #{COMPANY_NAME} ******************************** "
     	print "\n\n******************** For Product #{@@inc} ************************ "
         print "\n\nenter your name:"
         @fname=gets
@@ -15,32 +18,33 @@ class Havmore
     end
     
     def calc
-    	@tprice = @pprice.to_i * @gst.to_i
-        @ttprice = @tprice / 100
-        @totalprice = @ttprice.to_i + @pprice.to_i
+    	tprice = @pprice.to_i * @gst.to_i
+        ttprice = tprice / 100
+        @totalprice = ttprice.to_i + @pprice.to_i
     end
     
-    def print_op
+    def printdetails
+    	 
         p "\nWelcome #{@fname} Your invoice with #{@gst}% gst are below\n"
         print "\nProduct details with orignal price:\n"
-        print"#{@pname} - #{@pprice}"
+        print" #{$productcompany} : #{@pname} - #{@pprice}"
         print "\n\nproduct details with gst:\n"
-        print "#{@pname} - #{@totalprice}"
+        print "#{$productcompany} : #{@pname} - #{@totalprice}"
         @@inc=@@inc + 1
     end
     
 
 end
 
-product1=Havmore.new("Chocobar","100")
-product1.get_ip
+product1=Product.new("Chocobar","100")
+product1.getdetails
 product1.calc
-product1.print_op
+product1.printdetails
 
-product2=Havmore.new("Raspberry","20")
-product2.get_ip
+product2=Product.new("Raspberry","20")
+product2.getdetails
 product2.calc
-product2.print_op
+product2.printdetails
 
 #ans 2
 
@@ -56,10 +60,10 @@ class Company < User
   	@company=office
   end
   
-  def printOP()
-  puts "\n City name is #{CONST_VAR}"
-  puts " Company name is #{@company}"
-  puts " User name is #{@@user}"
+  def printOP
+  puts "\n\nCity name is #{CONST_VAR}"
+  puts "Company name is #{@company}"
+  puts "User name is #{@@user}"
   end
  
 end
@@ -68,4 +72,3 @@ end
 user=User.new('Krupa')
 company=Company.new('Bacancy')
 company.printOP
-

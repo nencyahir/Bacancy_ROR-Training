@@ -4,8 +4,8 @@ class Product
     @@inc=1
     
     def initialize(name,price)
-        @pname = name
-        @pprice = price
+        @productname = name
+        @productprice = price
     end
   
     def getdetails
@@ -18,18 +18,18 @@ class Product
     end
     
     def calc
-    	tprice = @pprice.to_i * @gst.to_i
-        ttprice = tprice / 100
-        @totalprice = ttprice.to_i + @pprice.to_i
+    	product_price = @productprice.to_i * @gst.to_i
+        total_price = product_price / 100
+        @totalprice = total_price.to_i + @productprice.to_i
     end
     
     def printdetails
     	 
         p "\nWelcome #{@fname} Your invoice with #{@gst}% gst are below\n"
         print "\nProduct details with orignal price:\n"
-        print" #{$productcompany} : #{@pname} - #{@pprice}"
+        print" #{$productcompany} : #{@productname} - #{@productprice}"
         print "\n\nproduct details with gst:\n"
-        print "#{$productcompany} : #{@pname} - #{@totalprice}"
+        print "#{$productcompany} : #{@productname} - #{@totalprice}"
         @@inc=@@inc + 1
     end
     

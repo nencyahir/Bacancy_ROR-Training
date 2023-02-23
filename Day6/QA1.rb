@@ -6,7 +6,6 @@ data = File.read("array.txt").split(",").map(&:to_i)
 counts = Hash.new(0)
 cnt = Proc.new{data.each { |element| counts[element] += 1 }}
 cnt.call
-puts counts
 
 h={}
 h1={}

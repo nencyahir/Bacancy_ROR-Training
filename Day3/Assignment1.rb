@@ -3,15 +3,15 @@ class Lasanga
 	puts "expected minutes is #{EXPECTED_MINUTES_IN_OVEN}"
  
 	def remaining_minutes_in_oven(t)
-	  @result=EXPECTED_MINUTES_IN_OVEN-t
-	  puts "remaining #{@result}"
-	  return @result
+	  result=EXPECTED_MINUTES_IN_OVEN-t
+	  puts "remaining #{result}"
+	  return result
 	end
 
-	def preparation_time_in_minutes(l)
-	  @k=l * 2
-	  puts "Layer #{@k}"
-	  return @k
+	def preparation_time_in_minutes(layer)
+	  totallayer=layer * 2
+	  puts "Layer #{totallayer}"
+	  return totallayer
 	end
 
 

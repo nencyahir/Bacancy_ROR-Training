@@ -1,5 +1,6 @@
+EXPECTED_MINUTES_IN_OVEN=40
+
 class Lasanga 
-    	EXPECTED_MINUTES_IN_OVEN=40
 	puts "expected minutes is #{EXPECTED_MINUTES_IN_OVEN}"
  
 	def remaining_minutes_in_oven(t)
